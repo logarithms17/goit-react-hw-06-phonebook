@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from 'components/App';
 import './index.css';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
+    // we can access store from this provider
+    <Provider store={store}>
+        <App />
+    </Provider>
 );
